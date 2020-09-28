@@ -1,16 +1,21 @@
 <ion-header [translucent]="true">
     <ion-toolbar>
-        <ion-title>
-            TAB -1
+      <ion-title>Title</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-    <ion-header collapse="condense">
-        <ion-toolbar>
-            <ion-title size="large">API</ion-title>
-        </ion-toolbar>
-    </ion-header>
+   
 
-    <app-explore-container name="Tab 1 page"></app-explore-container>
+    <ion-list>
+        <ion-item *ngFor="let chat of chats">
+            <!-- <ion-img width="40" height="40" src="{{partido.urlLogo}}"></ion-img> -->
+            <ion-label>{{ chats.id }} </ion-label>
+            <ion-label>{{ chats.contents.text}} </ion-label>
+
+            <app-buttom-go-to-link name="membros" icon="people" [idPartido]="partido.id"></app-buttom-go-to-link>
+        </ion-item>
+    </ion-list>
+
 </ion-content>
+

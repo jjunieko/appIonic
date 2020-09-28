@@ -7,6 +7,13 @@ import { environment } from "src/environments/environment";
 })
 export class ApiService {
   public url: string = environment.baseUlr;
+  httpClient: any;
 
-  constructor(httpClient: HttpClient) {}
+  constructor(httpClient: HttpClient) {
+
+  }
+
+  public getChat()  {
+    return this.httpClient.get(this.url + "chat");
+  }
 }

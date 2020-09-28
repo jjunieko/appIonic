@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUlr: "",
+  baseUlr: "https://api.zenvia.com/v2/",
 };
 
 /*
